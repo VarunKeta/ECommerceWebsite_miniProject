@@ -68,3 +68,166 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+import React from 'react'
+import './SignIn.css'
+import { useNavigate } from "react-router-dom";
+
+
+
+function SignIn() {
+  const navigate = useNavigate();
+  function func(c){
+    navigate('/home')
+  }
+  return (
+      <div>
+      <h1 className='text-center my-5'>Login</h1>
+      <form className='form d-block m-auto' >
+      <div className='d-flex username'>
+                  <label htmlFor="username">
+                    Username:
+                  </label>
+                  <div>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="username"
+                    // {...register("username", { required: true })}
+                  />
+                  </div>
+      </div>
+      <div className='d-flex password mt-3'>
+                  <label htmlFor="password">
+                    Password:
+                  </label>
+                  <div>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    // {...register("username", { required: true })}
+                  />
+                  </div>
+      </div>
+      <div className='text-center'>
+      <button className="btn btn-primary mt-3" role="button">Login</button>
+      </div>
+      </form>
+      
+    </div>
+  )
+}
+
+
+
+export default SignIn
+import React from 'react'
+import './SignIn.css'
+import { useNavigate } from "react-router-dom";
+
+function SignUp() {
+  return (
+    <div>
+      <h1 className='text-center my-5'>Register</h1>
+      <form className='form d-block m-auto'>
+      <div className='d-flex username'>
+                  <label htmlFor="username">
+                    Username:
+                  </label>
+                  <div>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="username"
+                    // {...register("username", { required: true })}
+                  />
+                  </div>
+      </div>
+      <div className='d-flex email mt-3'>
+                  <label htmlFor="email">
+                    Email:
+                  </label>
+                  <div>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    // {...register("username", { required: true })}
+                  />
+                  </div>
+      </div>
+      <div className='d-flex email mt-3'>
+                  <label htmlFor="email">
+                    Gender:
+                  </label>
+                  <div className='radio d-flex '>
+                    <div>
+                  <label htmlFor="email">
+                    Male
+                  </label>
+                  <input
+                    type="radio"
+                    className="form-control"
+                    id="email"
+                    // {...register("username", { required: true })}
+                  />
+                  </div>
+                  <div>
+                  <label htmlFor="email">
+                    Female
+                  </label>
+                  <input
+                    type="radio"
+                    className="form-control"
+                    id="email"
+                    // {...register("username", { required: true })}
+                  />
+                  </div>
+                  </div>
+      </div>
+      <div className='d-flex password mt-3'>
+                  <label htmlFor="password">
+                    Password:
+                  </label>
+                  <div>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    // {...register("username", { required: true })}
+                  />
+                  </div>
+      </div>
+      <div className='d-flex confirmPassord mt-3'>
+                  <label htmlFor="confirmPassword">
+                    Confirm Password:
+                  </label>
+                  <div>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="confirmPassword"
+                    // {...register("username", { required: true })}
+                  />
+                  </div>
+      </div>
+      <div className='text-center'>
+      <button className="btn btn-primary mt-3" type="submit" role="button">Register</button>
+      </div>
+      </form>
+      
+    </div>
+  )
+}
+
+export default SignUp
+.confirmPassord,.email,.username,.password{
+    justify-content:space-between;
+}
+.form{
+    width: 30%;
+}
+.radio{
+    gap: 3rem;
+    margin-right: 2rem;
+}
